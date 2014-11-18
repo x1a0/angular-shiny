@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shiny | A simple angular plugin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple angular plugin inspired by the logo on http://www.google.com/chrome/.">
+  <meta name="author" content="x1a0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+  <style>
+  .navbar-nav > li.gh-button {
+    padding: 11px 0 0 15px;
+  }
+  #brand {
+    margin-top: 41px;
+  }
+  #brand h1 {
+    margin: 20px 0;
+  }
+  .example {
+    margin-bottom: 50px;
+  }
+  .example pre {
+    margin-top: 10px;
+  }
+  </style>
+</head>
+
+<body ng-app="shiny-demo">
+  <!-- navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="./" class="navbar-brand" shiny shiny-strength="20" shiny-duration="300">Shiny</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="#getting-started">Getting started</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="examples">Examples <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+              <li><a href="#mini-setup">Mini-setup</a></li>
+              <li class="divider"></li>
+              <li><a href="#chrome-logo">Chrome logo</a></li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/x1a0/angular-shiny">Source code</a></li>
+          <li><a href="https://github.com/x1a0/angular-shiny/issues">Issues</a></li>
+          <li><a href="https://github.com/x1a0/angular-shiny/releases">Download</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="gh-button">
+            <iframe src="http://ghbtns.com/github-btn.html?user=x1a0&repo=angular-shiny&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px" kwframeid="3"></iframe>
+          </li>
+          <li class="gh-button">
+            <iframe src="http://ghbtns.com/github-btn.html?user=x1a0&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="135px" height="20px" kwframeid="7"></iframe>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- /navbar -->
+
+  <div id="brand" class="well">
+    <div class="container">
+      <h1>Shiny<small> - A simple angular plugin inspired by the logo on <a href="http://www.google.com/chrome/">Google chrome site</a>.</small></h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="getting-started">
+      <div class="page-header"><h2>Getting started</h2></div>
+      <p>Download Shiny from <a href="https://github.com/x1a0/angular-shiny/releases">here</a> or install with <a href="http://bower.io/">Bower</a>:</p>
+      <pre>bower install angular-shiny</pre>
+      <p>Inject Shiny into your Angular app:</p>
+      <pre>angular.module("someApp", ["shiny"]);</pre>
+      <p>
+        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+        <strong>Ready to shine</strong>
+        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+      </p>
+    </section>
+
+    <section id="examples">
+      <div class="page-header"><h2>Examples</h2></div>
+
+      <section id="mini-setup" class="example">
+        <h3>Mini setup</h3>
+        <button shiny type="button" class="btn btn-info btn-lg btn-block">Hover me</button>
+        <pre><code>&lt;button <strong>shiny</strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Hover me&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="chrome-logo" class="example">
+        <h3>Chrome logo</h3>
+        <img shiny shiny-center="33 36" shiny-duration="1600" shiny-strength="30" alt="Chrome" src="http://www.google.com/chrome/assets/common/images/chrome_logo_2x.png">
+        <pre><code>&lt;img <strong>shiny shiny-center=&quot;33 36&quot; shiny-duration=&quot;1600&quot; shiny-strength=&quot;30&quot;</strong> alt=&quot;Chrome&quot; src=&quot;http://www.google.com/chrome/assets/common/images/chrome_logo_2x.png&quot;&gt;</code></pre>
+      </section>
+    </section>
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="js/angular-shiny.min.js"></script>
+  <script type="text/javascript">
+    angular.module("shiny-demo", ["shiny"]);
+  </script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
