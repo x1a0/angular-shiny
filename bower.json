@@ -1,0 +1,21 @@
+{
+  "name": "angular-shiny",
+  "version": "0.0.0",
+  "authors": [
+    "x1a0 <zhangxiao@xzhang.net>"
+  ],
+  "main": "./dist/angular-shiny.js",
+  "keywords": ["shiny", "angular"],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": "~1.3.2",
+    "jquery": "~2.1.1"
+  }
+}
