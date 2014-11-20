@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
   <style>
+  code, pre {
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  }
   .navbar-nav > li.gh-button {
     padding: 11px 0 0 15px;
   }
@@ -23,6 +26,9 @@
   }
   .example pre {
     margin-top: 10px;
+  }
+  .highlight {
+    color: #d9230f;
   }
   </style>
 </head>
@@ -45,9 +51,13 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="examples">Examples <span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="#mini-setup">Mini-setup</a></li>
-              <li class="divider"></li>
               <li><a href="#chrome-logo">Chrome logo</a></li>
+              <li class="divider"></li>
+              <li><a href="#mini-setup">Mini-setup</a></li>
+              <li><a href="#listen-on-events">Listen on events</a></li>
+              <li><a href="#different-types">Different types</a></li>
+              <li><a href="#duration">Duration</a></li>
+              <li><a href="#strength">Strength</a></li>
             </ul>
           </li>
           <li><a href="https://github.com/x1a0/angular-shiny">Source code</a></li>
@@ -92,18 +102,53 @@
     <section id="examples">
       <div class="page-header"><h2>Examples</h2></div>
 
-      <section id="mini-setup" class="example">
-        <h3>Mini setup</h3>
-        <button shiny type="button" class="btn btn-info btn-lg btn-block">Hover me</button>
-        <pre><code>&lt;button <strong>shiny</strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Hover me&lt;/button&gt;</code></pre>
-      </section>
-
       <section id="chrome-logo" class="example">
         <h3>Chrome logo</h3>
         <img shiny shiny-center="33 36" shiny-duration="1600" shiny-strength="30" alt="Chrome" src="http://www.google.com/chrome/assets/common/images/chrome_logo_2x.png">
-        <pre><code>&lt;img <strong>shiny shiny-center=&quot;33 36&quot; shiny-duration=&quot;1600&quot; shiny-strength=&quot;30&quot;</strong> alt=&quot;Chrome&quot; src=&quot;http://www.google.com/chrome/assets/common/images/chrome_logo_2x.png&quot;&gt;</code></pre>
+        <pre><code>&lt;img <strong class="highlight">shiny shiny-center=&quot;33 36&quot; shiny-duration=&quot;1600&quot; shiny-strength=&quot;30&quot;</strong> alt=&quot;Chrome&quot; src=&quot;http://www.google.com/chrome/assets/common/images/chrome_logo_2x.png&quot;&gt;</code></pre>
       </section>
-    </section>
+
+      <section id="mini-setup" class="example">
+        <h3>Mini setup</h3>
+        <button shiny type="button" class="btn btn-info btn-lg btn-block">Hover me</button>
+        <pre><code>&lt;button <strong class="highlight">shiny</strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Hover me&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="listen-on-events" class="example">
+        <h3>Listen on events</h3>
+
+        <button shiny shiny-on="click" type="button" class="btn btn-info btn-lg btn-block">Click me</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-on=&quot;click&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Click me&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="different-types" class="example">
+        <h3>Differnt types</h3>
+
+        <button shiny shiny-type="right" type="button" class="btn btn-info btn-lg btn-block">Right to left (hover me)</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-type=&quot;right&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Right to left (hover me)&lt;/button&gt;</code></pre>
+
+        <button shiny shiny-type="middle" type="button" class="btn btn-info btn-lg btn-block">Middle to sides (hover me)</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-type=&quot;middle&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Middle to sides (hover me)&lt;/button&gt;</code></pre>
+
+        <button shiny shiny-center="30% 50%" type="button" class="btn btn-info btn-lg btn-block">Custom (hover me)</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-center=&quot;20% 50%&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;Custom (hover me)&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="duration" class="example">
+        <h3>duration</h3>
+
+        <button shiny shiny-duration="3000" type="button" class="btn btn-info btn-lg btn-block">This one takes 3 seconds (hover me)</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-duration=&quot;3000&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;This one takes 3 seconds (hover me)&lt;/button&gt;</code></pre>
+      </section>
+
+      <section id="strength" class="example">
+        <h3>strength</h3>
+
+        <button shiny shiny-strength="300" type="button" class="btn btn-info btn-lg btn-block">I am stronger! (hover me)</button>
+        <pre><code>&lt;button <strong>shiny <span class="highlight">shiny-strength=&quot;300&quot;</span></strong> type=&quot;button&quot; class=&quot;btn btn-info btn-lg btn-block&quot;&gt;I am stronger! (hover me)&lt;/button&gt;</code></pre>
+      </section>
+
+    </section><!-- /examples -->
 
   </div>
 
